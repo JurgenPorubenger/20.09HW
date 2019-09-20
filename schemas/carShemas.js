@@ -12,8 +12,12 @@ const car = {
 
     },
     functions: {
-      type: 'string',
-      pattern: '/^[a-z]$/',
+      type: 'array',
+      minItems: 2,
+      items: {
+        type: 'string',
+        pattern: '^[a-z][0-9]?$',
+      },
     },
   },
 };
